@@ -1,3 +1,13 @@
+:root {
+  --league-dark-blue: rgb(6, 28, 37);
+  --league-light-blue: #006680;
+}
+
+@font-face {
+  font-family: 'champ-names';
+  src: url(../fonts/NotoSerif-Italic.ttf);
+}
+
 * {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
       Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -8,10 +18,92 @@
   list-style: none;
 }
 
-.startGame {
+.instructions {
+  top: 0;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px;
+  background-image: url(../imgs/league-background.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.instructions h1 {
+  font-size: 3rem;
+  text-shadow: 0 0 8px black, 0 0 20px black;
+  color: white;
+  text-decoration: underline;
+}
+
+.gameRules {
+  max-width: 1200px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.gameRules p {
+  font-size: 2rem;
+}
+
+.startGameBtn {
   padding: 15px 30px;
   font-size: 2rem;
-  border: none;
+  border: solid 1px white;
   border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: var(--league-dark-blue);
+  color: white;
+  box-shadow: 0 0 8px black;
+}
+
+.startGameBtn:hover {
+  background-color: var(--league-light-blue);
+}
+
+.champCard {
+  width: 300px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: var(--league-dark-blue);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  overflow: hidden;
+  border-radius: 8px;
+  margin: 0 auto;
+}
+
+.champImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 82%;
+}
+
+.champName {
+  color: white;
+  font-family: 'champ-names';
+  font-size: 2rem;
+  letter-spacing: 1px;
+  text-align: center;
+  height: 18%;
+  padding: 4% 0;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.6);
+  white-space: nowrap;
+}
+
+.champCard:hover {
+  background-color: var(--league-light-blue);
   cursor: pointer;
 }

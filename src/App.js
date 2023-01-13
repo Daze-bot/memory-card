@@ -1,19 +1,15 @@
 import React, { useState } from "react";
-import Instructions from "./components/instructions";
+import Instructions from "./components/Instructions";
 import './styles/styles.css';
+import ChampDisplay from "./components/ChampDisplay";
 
 const App = () => {
-  const [test, setTest] = useState('test');
-
-  const testTheTest = () => {
-    setTest('working');
-  }
 
   return (
     <div>
-      <div>{test}</div>
-      <button onClick={testTheTest}>Test Me!</button>
       <Instructions />
+      <ChampDisplay name="bel'veth" />
+      <ChampDisplay name="ahri" />
     </div>
   );
 }
