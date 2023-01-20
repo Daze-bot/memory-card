@@ -18,6 +18,11 @@
   list-style: none;
 }
 
+.app {
+  min-height: 100vh;
+  background-color: rgba(6, 28, 37, 0.30);
+}
+
 .instructions {
   top: 0;
   position: fixed;
@@ -54,7 +59,8 @@
   font-size: 2rem;
 }
 
-.startGameBtn {
+.startGameBtn,
+.newGameBtn {
   padding: 15px 30px;
   font-size: 2rem;
   border: solid 1px white;
@@ -66,7 +72,8 @@
   box-shadow: 0 0 8px black;
 }
 
-.startGameBtn:hover {
+.startGameBtn:hover,
+.newGameBtn:hover {
   background-color: var(--league-light-blue);
 }
 
@@ -122,9 +129,17 @@ header h1 {
   border-left: 1px solid white;
 }
 
+main {
+  padding: 10px 10px 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
 .champCard {
-  width: 300px;
-  height: 400px;
+  width: 225px;
+  height: 285px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -133,6 +148,8 @@ header h1 {
   overflow: hidden;
   border-radius: 8px;
   margin: 0 auto;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .champImg {
@@ -141,12 +158,13 @@ header h1 {
   align-items: center;
   width: 100%;
   height: 82%;
+  pointer-events: none;
 }
 
 .champName {
   color: white;
   font-family: 'champ-names';
-  font-size: 2rem;
+  font-size: 1.5rem;
   letter-spacing: 1px;
   text-align: center;
   height: 18%;
@@ -159,4 +177,5 @@ header h1 {
   background-color: var(--league-light-blue);
   cursor: pointer;
   box-shadow: 0 0 8px black;
+  font-weight: 700;
 }

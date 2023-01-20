@@ -1,4 +1,4 @@
-import React, { useState }from "react";
+import React, { useState } from "react";
 
 const Instructions = () => {
   const [visible, setVisible] = useState(true);

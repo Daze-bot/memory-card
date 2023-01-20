@@ -1,11 +1,13 @@
-import React from "react"
+import React, { useState } from "react"
 import { champImages } from "../helpers/championImgLoader";
 import useSound from "use-sound";
 import Click from '../sounds/click.wav';
 
 const ChampDisplay = (props) => {
+  const [clicked, setClicked] = useState(false);
+
   const matchNameToImg = (string) => {
-    return string.replace(/\s/g, '').replace(/'/g, '');
+    return string.replace(/\s/g, '').replace(/'/g, '').replace(/\./g, '');
   }
 
   const [click] = useSound(
@@ -13,9 +15,17 @@ const ChampDisplay = (props) => {
     {volume: 0.4}
   );
 
+  const checkClicked = () => {
+    if (clicked === true) {
+      props.handleGameOver();
+    }
+  }
+
   const clickEvent = () => {
     click();
     props.addToScore();
+    checkClicked();
+    setClicked(true);
   }
 
   return (
