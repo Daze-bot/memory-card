@@ -1,25 +1,44 @@
 import React, { useState } from "react";
 
 const GameOver = (props) => {
-  const [visible, setVisible] = useState(true);
+  const [loading, setLoading] = useState(false);
 
-  const playAgain = () => {
-    setVisible(false);
+  let prompt = '';
+
+  if (props.score === props.highScore) {
+    prompt = 'This is a new highscore!';
+  } else {
+    prompt = '';
   }
 
-  if (!visible) {
-    return null;
+  const handleClick = () => {
+    props.newGame();
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false)
+    }, 1500)
+  }
+
+  if (loading) {
+    return (
+      <div className="gameOver">
+        <div className="loadingScreen">
+          LOADING...
+          <div className="loader"></div>
+        </div>
+      </div>
+    )
   }
 
   return (
     <div className="gameOver">
-      <h1>Game Over!</h1>
+      <h1>GAME OVER</h1>
       <div className="finalScore">
-        Congrats! Your score was {props.score}
+        Congrats! Your score was <span>{props.score}</span>. {prompt}
       </div>
       <button 
         className="newGameBtn" 
-        onClick={playAgain}
+        onClick={handleClick}
       >Play Again</button>
     </div>
   );

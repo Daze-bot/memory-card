@@ -1,16 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
-const Instructions = () => {
-  const [visible, setVisible] = useState(true);
-
-  const removeInstructions = () => {
-    setVisible((prev) => !prev);
-  }
-
-  if (!visible) {
-    return null;
-  }
-
+const Instructions = (props) => {
   return (
     <div className="instructions">
       <h1>League of Legends Memory Game</h1>
@@ -22,7 +12,7 @@ const Instructions = () => {
       </div>
       <button 
         className="startGameBtn" 
-        onClick={removeInstructions}
+        onClick={props.startGame}
       >Play Game</button>
     </div>
   );

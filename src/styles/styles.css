@@ -59,8 +59,37 @@
   font-size: 2rem;
 }
 
-.startGameBtn,
-.newGameBtn {
+.gameOver {
+  top: 0;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 80px;
+  background-color: var(--league-dark-blue);
+  color: white;
+}
+
+.gameOver h1 {
+  font-size: 4rem;
+  font-family: 'champ-names';
+}
+
+.finalScore {
+  font-size: 2rem;
+}
+
+.finalScore span {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.startGameBtn {
   padding: 15px 30px;
   font-size: 2rem;
   border: solid 1px white;
@@ -72,9 +101,27 @@
   box-shadow: 0 0 8px black;
 }
 
-.startGameBtn:hover,
-.newGameBtn:hover {
+.startGameBtn:hover {
   background-color: var(--league-light-blue);
+}
+
+
+.newGameBtn {
+  padding: 15px 30px;
+  font-size: 2rem;
+  border: 1px solid white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: var(--league-light-blue);
+  color: white;
+  box-shadow: 0 0 8px black;
+}
+
+.newGameBtn:hover {
+  background-color: white;
+  color: var(--league-dark-blue);
+  border: 1px solid white;
 }
 
 header {
@@ -178,4 +225,27 @@ main {
   cursor: pointer;
   box-shadow: 0 0 8px black;
   font-weight: 700;
+}
+
+.loadingScreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  font-size: 5vw;
+}
+
+.loader {
+  border: 12px solid white;
+  border-top: 12px solid #3498db;
+  border-radius: 50%;
+  width: 5vw;
+  height: 5vw;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
