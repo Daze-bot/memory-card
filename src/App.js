@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Main from "./components/Main";
 import GameOver from "./components/GameOver";
 import champions from "./library/champions";
+import RoundComplete from "./components/RoundComplete";
 
 const App = () => {
   const savedHighScore = window.localStorage.getItem('memoryGameHighScore') || 0;
@@ -21,6 +22,7 @@ const App = () => {
   const [nextRoundChamps, setNextRoundChamps] = useState(champs.sort(() => 0.5 - Math.random()).slice(0, ((round + 1) * 2 + 2)));
   const [roundClicks, setRoundClicks] = useState(0);
   const [freshBoard, setFreshBoard] = useState(true)
+  const [showRoundComplete, setShowRoundComplete] = useState(false)
 
   const shuffleChamps = () => {
     setRoundChamps(roundChamps.sort(() => 0.5 - Math.random()));
@@ -71,6 +73,7 @@ const App = () => {
   const handleNextRound = () => {
     newRound();
     resetRoundClicks();
+    setShowRoundComplete(true);
   }
 
   if (roundClicks === (round * 2) + 2 && !gameOver) {
@@ -82,21 +85,39 @@ const App = () => {
     setFirstLoad(false);
   }
 
-  if (firstLoad === true) {
-      return (
-        <div className="app">
-          <Instructions
-            startGame={startGame}
-          />
-        </div>
-      );
-  } else if (gameOver === true) {   
+  const handleLoadNextRound = () => {
+    setShowRoundComplete(false);
+  }
+
+  if (firstLoad) {
+    return (
+      <div className="app">
+        <Instructions
+          startGame={startGame}
+        />
+      </div>
+    );
+  } else if (gameOver) {   
     return (
       <div className="app">
         <GameOver
           score={finalScore}
           newGame={handleNewGame}
           highScore={highScore}
+        />
+      </div>
+    );
+  } else if (showRoundComplete && round !== 1) {
+    return (
+      <div className="app">
+        <Header 
+          currentRound={round}
+          currentScore={currentScore}
+          highScore={highScore}
+        />
+        <RoundComplete
+          round={round}
+          nextRound={handleLoadNextRound}
         />
       </div>
     );

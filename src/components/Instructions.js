@@ -5,9 +5,13 @@ const Instructions = (props) => {
     <div className="instructions">
       <h1>League of Legends Memory Game</h1>
       <div className="gameRules">
-        <p>The rules are simple - never click on the same champion more than once!</p>
+        <h2>Game Rules</h2>
         <br></br>
-        <p>Each level will increase the difficulty by adding more champions for you to keep track of.  Try to beat your highscore!
+        <br></br>
+        <p>- Never click on the same champion more than once per round.</p>
+        <br></br>
+        <br></br>
+        <p>- Each round will increase the difficulty by adding more champions for you to keep track of.  Try to beat your highscore!
         </p>
       </div>
       <button 
