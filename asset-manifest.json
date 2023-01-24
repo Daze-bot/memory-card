@@ -1,9 +1,11 @@
 {
   "files": {
-    "main.css": "/memory-card/static/css/main.1dbb084b.css",
-    "main.js": "/memory-card/static/js/main.f2d7e530.js",
+    "main.css": "/memory-card/static/css/main.daea7065.css",
+    "main.js": "/memory-card/static/js/main.57857888.js",
     "static/js/845.b1c993d1.chunk.js": "/memory-card/static/js/845.b1c993d1.chunk.js",
     "static/media/league-background.jpg": "/memory-card/static/media/league-background.d2a04599b84c86ff3035.jpg",
+    "static/media/highScore.wav": "/memory-card/static/media/highScore.3c8f766f112a6a3ab52c.wav",
+    "static/media/gameEnd.wav": "/memory-card/static/media/gameEnd.b6f78aa702ebe47d239b.wav",
     "static/media/NotoSerif-Italic.ttf": "/memory-card/static/media/NotoSerif-Italic.1e82b5d859a211c6890f.ttf",
     "static/media/seraphine.jpg": "/memory-card/static/media/seraphine.b7ffa1a09d505053e093.jpg",
     "static/media/aphelios.jpg": "/memory-card/static/media/aphelios.42ed111886ad9aa43138.jpg",
@@ -13,6 +15,7 @@
     "static/media/samira.jpg": "/memory-card/static/media/samira.7371c0d22003a464de2f.jpg",
     "static/media/sett.jpg": "/memory-card/static/media/sett.18a093081f994b545563.jpg",
     "static/media/click.wav": "/memory-card/static/media/click.7421a8f14b59a0c74664.wav",
+    "static/media/success.wav": "/memory-card/static/media/success.d59181a64cb0e0aef9bb.wav",
     "static/media/xerath.jpg": "/memory-card/static/media/xerath.a0373836487a927baa68.jpg",
     "static/media/heimerdinger.jpg": "/memory-card/static/media/heimerdinger.590049a01d634183a1e7.jpg",
     "static/media/vi.jpg": "/memory-card/static/media/vi.8bae5e94fe9e8acd0921.jpg",
@@ -169,12 +172,12 @@
     "static/media/nocturne.jpg": "/memory-card/static/media/nocturne.426a94df400d0c6676f2.jpg",
     "static/media/mordekaiser.jpg": "/memory-card/static/media/mordekaiser.d724d4329e9bcd9571c6.jpg",
     "index.html": "/memory-card/index.html",
-    "main.1dbb084b.css.map": "/memory-card/static/css/main.1dbb084b.css.map",
-    "main.f2d7e530.js.map": "/memory-card/static/js/main.f2d7e530.js.map",
+    "main.daea7065.css.map": "/memory-card/static/css/main.daea7065.css.map",
+    "main.57857888.js.map": "/memory-card/static/js/main.57857888.js.map",
     "845.b1c993d1.chunk.js.map": "/memory-card/static/js/845.b1c993d1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1dbb084b.css",
-    "static/js/main.f2d7e530.js"
+    "static/css/main.daea7065.css",
+    "static/js/main.57857888.js"
   ]
 }
