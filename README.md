@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# League of Legends Memory Game
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A League of Legends themed memory card game
 
-## Available Scripts
+<div align="center">
+  <kbd>
+    <img src="https://i.imgur.com/IRcKwsD.jpeg" />
+  </kbd>
+</div>
 
-In the project directory, you can run:
+## Description
 
-### `npm start`
+Each round, the users must click on every champion without clicking on the same champion more than once per round.  The images will shuffle after each click and the rounds get increasingly more difficult by adding more and more champions each round.  The user's personal high-score is stored in local storage
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### <a href="https://daze-bot.github.io/memory-card/" target="_blank">View Live</a>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Features
 
-### `npm test`
+- Instructions
+- Interactive and challenging gameplay
+- Immersive sound queues for success as well as failure
+- Personal high-score tracking
+- Great replayability, no two rounds are ever the same
+- Hidden user message for "beating" all 80 rounds of the game
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Built with
 
-### `npm run build`
+- React
+- GitHub pages
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Prerequisites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Built on Ubuntu 20.04
+- Install npm on local machine
 
-### `npm run eject`
+### Install
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Clone the github repository
+- run ```npm install``` to install all dependencies
+- run ```npm run start``` to open a locally hosted version of the app
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Usage
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Playing the game:
+<div align="center">
+  <kbd>
+    <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2liYWYwdjFhOW9oamlyeW1ybHdpbXAxNDNkaG5uOXoxM2gybmh5dyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/6zHGou92WqTEi590FS/giphy.gif"/>
+  </kbd>
+</div>
